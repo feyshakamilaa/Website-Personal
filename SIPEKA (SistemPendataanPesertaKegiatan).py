@@ -1,4 +1,3 @@
-# Orang Pertama: Faza
 import csv
 import os
 print("File disimpan di folder:", os.getcwd())
@@ -41,7 +40,6 @@ tanggal_kegiatan = ""
 penyelenggara = ""
 dataPeserta = []
 
-# Orang kedua: hfsh
 def tambah_peserta(nama, email, instansi, no_telepon, hadir):
     if len(dataPeserta) >= MAX_PESERTA:
         return "Data peserta sudah penuh."
@@ -76,7 +74,6 @@ def edit_peserta(nama_target, nama_baru, email_baru, instansi_baru, no_telepon_b
             return "Peserta berhasil diubah."
     return "Peserta dengan nama tersebut tidak ditemukan."
 
-# Orang Ketiga fey
 def hapus_peserta_sequential(nama_target):
     for i in range(len(dataPeserta)):
         if dataPeserta[i].nama == nama_target:
@@ -123,7 +120,6 @@ def cari_peserta_sequential(keyword):
 
 
 # BUAT GUI TAMPILAN SEMACAM LOGIN WELCOME
-# 1 fey
 import tkinter as tk
 from tkinter import messagebox, simpledialog, ttk
     
@@ -204,8 +200,7 @@ def form_peserta(is_edit=False, peserta=None, idx_edit=None):
 
 def tambah_gui():
     form_peserta()
-
-# 3
+    
 def edit_gui():
     selected = listbox.selection()
     if selected:
@@ -215,7 +210,6 @@ def edit_gui():
     else:
         messagebox.showwarning("Pilih Data", "Pilih peserta yang ingin diedit.")
 
-# 2 hfsh
 def hapus_gui():
     selected = listbox.selection()
     if selected:
@@ -288,7 +282,6 @@ def halaman_masuk():
 
     login_win.mainloop()
 
-# 3 faza
 def buka_halaman_utama():
     global root, listbox, search_var, jumlah_label
     root = tk.Tk()
